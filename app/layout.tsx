@@ -1,9 +1,9 @@
-import Link from "next/link"
 import "./globals.css"
 import { Inter } from "next/font/google"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Analytics } from "@/components/analytics"
 import { ModeToggle } from "@/components/mode-toggle"
+import ActiveLink from "@/components/active-link"
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -17,6 +17,10 @@ interface RootLayoutProps {
 }
 
 export default function RootLayout({ children }: RootLayoutProps) {
+  const links = [
+    { href: "/resume", label: "Resume" },
+    { href: "/portfolio", label: "Portfolio" },
+  ]
   return (
     <html lang="en">
       <body
@@ -28,8 +32,16 @@ export default function RootLayout({ children }: RootLayoutProps) {
               <div className="flex items-center justify-between">
                 <ModeToggle />
                 <nav className="ml-auto text-sm font-medium space-x-6">
-                  <Link href="/resume">Resume</Link>
-                  <Link href="/portfolio">Portfolio</Link>
+                  {links.map((link, i) => (
+                    // <Link key={i} href={link.href}>
+                    //   <a className={pathname === link.href ? "text-gray-900 dark:text-gray-100" : "text-gray-500 dark:text-gray-400"}>
+                    //     {link.label}
+                    //   </a>
+                    // </Link>
+                    <ActiveLink key={i} href={link.href}>
+                      {link.label}
+                    </ActiveLink>
+                  ))}
                 </nav>
               </div>
             </header>
