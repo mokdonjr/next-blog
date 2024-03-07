@@ -1,4 +1,5 @@
 import { defineDocumentType, makeSource } from "contentlayer/source-files"
+import remarkGfm from "remark-gfm";
 
 /** @type {import('contentlayer/source-files').ComputedFields} */
 const computedFields = {
@@ -24,6 +25,13 @@ export const Page = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    createdAt: {
+      type: "date",
+      required: true,
+    },
+    lastUpdatedAt: {
+      type: "date",
+    },
   },
   computedFields,
 }))
@@ -40,9 +48,12 @@ export const Post = defineDocumentType(() => ({
     description: {
       type: "string",
     },
-    date: {
+    createdAt: {
       type: "date",
-      required: true,
+      // required: true,
+    },
+    lastUpdatedAt: {
+      type: "date",
     },
   },
   computedFields,
@@ -51,4 +62,7 @@ export const Post = defineDocumentType(() => ({
 export default makeSource({
   contentDirPath: "./content",
   documentTypes: [Post, Page],
+  mdx: {
+    remarkPlugins: [remarkGfm],
+  },
 })
