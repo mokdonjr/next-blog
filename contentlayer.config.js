@@ -27,7 +27,6 @@ export const Page = defineDocumentType(() => ({
     },
     createdAt: {
       type: "date",
-      required: true,
     },
     lastUpdatedAt: {
       type: "date",
