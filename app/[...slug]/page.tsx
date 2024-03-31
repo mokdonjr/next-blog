@@ -51,7 +51,7 @@ export default async function PagePage({ params }: PageProps) {
 
   const isUpdated: boolean = !!page.lastUpdatedAt;
 
-  if (params.slug[0] === "resume" || params.slug[0] === "portfolio") {
+  if (params.slug[0] === "resume") {
     return (
       <article className="py-6 prose dark:prose-invert">
         {isUpdated ? (
