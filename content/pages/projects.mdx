@@ -2,7 +2,7 @@
 title: 백승찬 경력기술서
 # description: 6+ Back End Engineer
 # createdAt: 2024-03-06T10:41:00.000
-lastUpdatedAt: 2024-04-01T00:00:00.000
+lastUpdatedAt: 2024-03-31T00:00:00.000
 ---
 
 ## 여행자와 현지인의 커피챗 플랫폼 [Lototo](https://sg-web-ochre.vercel.app)
@@ -51,6 +51,9 @@ lastUpdatedAt: 2024-04-01T00:00:00.000
     - 유저별 행동/포인트/상품구매/컨텐츠별 통계 및 분석을 위한 트래킹 시스템 개발.
     - 시간별/일별/월별 단위 RU/MAU/컨텐츠실행수/포인트발행량 추적
     - 시간별 사내 메신저 알림 자동화
+4. 신규 시스템 개발.
+    - Google/Facebook/Twitter/Apple 인증 시스템.
+    - 오프라인 QR 프로모션 쿠폰 시스템.
 
 ## NFT 프로젝트 [SITT (Sardines in the tin)](https://sitt.life)
 * **소개** : Solana 블록체인을 활용한 PFP NFT 프로젝트
@@ -67,7 +70,7 @@ lastUpdatedAt: 2024-04-01T00:00:00.000
 * **역할** : @Netmarble F&C / R&D실 백엔드 4명 (Platform Back-end 개발 담당)
 * **참고링크** : https://7ds.netmarble.com/
 * **사용기술** : Java/Spring, MyBatis, JPA/QueryDSL, MySQL, Redis, Netty, Protobuf, Jenkins Pipeline, Shell
-1. SaaS 이용 게임프로젝트별 요구사항 충족을 위한 프로젝트 설정 지속적 추가 개발 및 다수 게임 적용 성공. (일곱개의대죄, 세븐나이츠2, 에이지오브타이탄, 아이언쓰론 및 다수 신작에 사용)
+1. 다수 게임 (일곱개의대죄, 세븐나이츠2, 에이지오브타이탄, 아이언쓰론 및 다수 신작에 사용) 적용 성공하여 CCU (동시접속) 30만 달성.
 2. 신규 공용 채팅 서버 개발 및 운영.
     - 방/유저/구독/메시지 등 채팅 시스템 개발 및 Socket/Rest api 동시 지원 구조로 확장 지원.
     - 게임프로젝트별 채팅방 설정/통계/금칙어/밴/admin 메시지 등 운영툴 개발.
@@ -80,17 +83,24 @@ lastUpdatedAt: 2024-04-01T00:00:00.000
     - 사이드이펙트 방지를 위한 JUnit 테스트 도입 및 Jenkins Pipeline 적용. Test Coverage 0% --> 60% 달성해 안정성 및 개발 속도 증가.
 5. Legacy 다국어 운영툴 운영 및 신규 기능 개발.
     - OOM 사후 추적을 위한 HeapDump 분석 환경 구축.
+6. SaaS 이용 프로젝트별 요구사항 충족을 위한 프로젝트 설정 지속적 추가하고 개발을 넘어 문서화/프레젠테이션 까지 진행.
 
 ## MMORPG게임 [킹아서:레전드라이즈](https://kabam.com/games/king-arthur-legends-rise/)
 * **소개** : MMORPG + MMO전략 장르 융합 신작 개발
 * **기간** : 2019-07 ~ 2020-08 (1년 2개월)
 * **역할** : @Gurobal Games / 서버팀 3명 (Game Server 개발 담당)
 * **참고링크** : https://kabam.com/games/king-arthur-legends-rise/
-* **사용기술** : Java/Spring, MyBatis, MySQL, Redis, Netty, Flatbuffers
-1. MMO 오픈월드 타일 DB 설계 및 부대이동/충돌체크/실시간전투/시뮬레이션전투 등 개발.
-2. Redis Pubsub 을 활용해 Scale-out 기반 게임 서버 개발.
-3. 넷마블 sdk 인증/푸쉬/IAP 연동.
-4. DeadLock 사후 추적을 위한 에러로그 및 innodb engine 로그 기록/알림 자동화.
+* **사용기술** : Java/Spring, Netty, Flatbuffers, MyBatis, MySQL, Redis
+1. 신규 시스템 설계 및 구축
+    - 클라이언트와 TCP Socket 을 위한 Non Blocking 라이브러리 Netty 활용 및 세션 관리 Stateful 서버 기반 개발
+    - 클라이언트 및 서버와 통신시 Flatbuffers 로 직렬화된 패킷 활용
+    - Redis Pubsub 을 활용한 Scale-out 구조 개발
+    - MMO 오픈월드 타일 DB 설계 및 부대이동/충돌체크/실시간전투/시뮬레이션전투 등 개발
+    - 넷마블 sdk 인증/푸쉬/IAP 연동
+2. 업무 자동화
+    - Flatbuffers 사용성 증가를 위한 Java Builder 패턴 Generator 개발
+    - Jenkins Pipeline 을 이용한 빌드/테스트/정적분석/배포 CI/CD 자동화 구축
+    - DeadLock 사후 추적을 위한 에러로그 및 innodb engine 로그 기록/알림 자동화.
 
 ## MMO전략게임 [아이언쓰론](https://ironthrone.netmarble.com/)
 * **소개** : MMO전략 장르 게임
@@ -98,13 +108,13 @@ lastUpdatedAt: 2024-04-01T00:00:00.000
 * **기간** : 2018-01 ~ 2019-07 (1년 7개월)
 * **역할** : @Netmarble F&C (4plat) / 서버팀 7명 (Game Server 개발 담당)
 * **참고링크** : https://ironthrone.netmarble.com/
-* **사용기술** : Java/Spring, MyBatis, MySQL, Redis, Netty, Protobuf
+* **사용기술** : Java/Spring, Netty, Protobuf, MyBatis, MySQL, Redis
 1. 당대 전략장르 북미 최고 인기/매출 게임 개발부터 런칭/운영에 기여, 대한민국 게임대상 우수상 수상
-2. MMO 오픈월드 컨텐츠 개선
+2. 런칭 후 지속적인 서비스 개선
     - 전투 후처리 트랜잭션 응답 속도 개선을 위한 비동기 보상 시스템 개발
     - 런칭후 특정 시간대 점수이벤트 시스템 DeadLock 해결을 위한 전체 트랜잭션 데이터 점유 순서 리팩토링
     - 런칭후 지속적 월드 오브젝트 추가로 인한 오브젝트별 Strategy Pattern 적용한 리팩토링
-3. 신규 컨텐츠 개발
+3. 신규 기능 개발
     - 선착순 아이템 수령 시스템 개발
     - 클라이언트 기반 컨텐츠 보상처리를 위한 Java 서버기반으로 재개발 및 엔진화
     - 아레나 컨텐츠 듀얼 매치 시스템 개발
