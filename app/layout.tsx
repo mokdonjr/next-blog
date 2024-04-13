@@ -19,6 +19,7 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   const links = [
     { href: "/resume", label: "Resume" },
+    { href: "/competency", label: "Competency" },
     { href: "/projects", label: "Projects" },
     { href: "/portfolio", label: "Portfolio" },
   ]
@@ -32,7 +33,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <header>
               <div className="flex items-center justify-between">
                 <ModeToggle />
-                <nav className="ml-auto text-lg font-medium space-x-6">
+                <nav className="ml-auto text-base font-medium space-x-4">
                   {links.map((link, i) => (
                     // <Link key={i} href={link.href}>
                     //   <a className={pathname === link.href ? "text-gray-900 dark:text-gray-100" : "text-gray-500 dark:text-gray-400"}>
