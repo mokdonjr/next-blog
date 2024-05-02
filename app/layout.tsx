@@ -19,9 +19,9 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   const links = [
     { href: "/resume", label: "Resume" },
-    { href: "/competency", label: "Competency" },
+    { href: "/cv", label: "CV" },
     { href: "/projects", label: "Projects" },
-    { href: "/portfolio", label: "Portfolio" },
+    // { href: "/portfolio", label: "Portfolio" },
   ]
   return (
     <html lang="en">
